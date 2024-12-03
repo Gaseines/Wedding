@@ -1,0 +1,156 @@
+.nav_menu {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.39);
+  backdrop-filter: blur(6px);
+
+  position: fixed;
+  z-index: 999;
+}
+
+.monograma {
+  width: 50px;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+
+.lista_menu {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.item_menu {
+  margin: 20px;
+  font-size: 1.3em;
+  position: relative;
+}
+
+.lista_menu a {
+  color: var(--begeClaro);
+  text-decoration: none;
+  font-family: "Ginger", sans-serif;
+}
+
+.item_menu::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--begeClaro);
+
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+
+  transition: 0.5s ease-in-out;
+}
+
+.item_menu:hover::after {
+  width: 50%;
+}
+
+.icone_menu {
+  width: 25px;
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.icone_menu:hover {
+  transform: scale(110%);
+}
+
+@media screen and (max-width: 980px) {
+  .nav_menu {
+    animation: nav 1s ease-in-out forwards;
+  }
+
+  .lista_menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item_menu {
+    animation: itens2 1s ease-in-out forwards;
+  }
+
+  .burguer {
+    display: block;
+  }
+
+  .fechar {
+    display: block;
+  }
+
+  .open {
+    animation: rotate_left 0.5s ease-in-out forwards;
+  }
+
+  .close {
+    animation: rotate_right 0.5s ease-in-out forwards;
+  }
+
+  .menu_open {
+    animation: menu_open 1s ease-in-out forwards;
+  }
+
+  .itens_active {
+    animation: itens 1.5s ease-in-out forwards;
+  }
+}
+
+@keyframes rotate_left {
+  100% {
+    opacity: 0;
+    transform: rotate(-360deg);
+    display: none;
+  }
+}
+
+@keyframes rotate_right {
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+    display: block;
+  }
+}
+
+@keyframes menu_open {
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes itens {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes itens2 {
+  100% {
+    opacity: 0;
+    text-align: center;
+    width: 200px;
+    display: none;
+  }
+}
+
+@keyframes nav {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 70px;
+  }
+}
