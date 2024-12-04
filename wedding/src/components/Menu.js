@@ -22,19 +22,19 @@ function Menu() {
         <img className={styles.monograma} src={monograma} alt="GL" />
         <ul className={`${styles.lista_menu}`}>
           <li className={`${styles.item_menu} ${openMenu ? styles.itens_active : ""}`}>
-            <a href="/">Início</a>
+            <a href="#inicio">Início</a>
           </li>
           <li className={`${styles.item_menu} ${openMenu ? styles.itens_active : ""}`}>
-            <a href="/">Confirme sua presença</a>
+            <a href="#confirm">Confirme sua presença</a>
           </li>
           <li className={`${styles.item_menu} ${openMenu ? styles.itens_active : ""}`}>
-            <a href="/">Presentes</a>
+            <a href="https://noivos.casar.com/gabriel-e-luiza-2025-05-04#/one-page/_start">Presentes</a>
           </li>
           <li className={`${styles.item_menu} ${openMenu ? styles.itens_active : ""}`}>
-            <a href="/">Informações</a>
+            <a href="#local">Local</a>
           </li>
           <li className={`${styles.item_menu} ${openMenu ? styles.itens_active : ""}`}>
-            <a href="/">Nossa História</a>
+            <a href="#nossaHistoria">Nossa História</a>
           </li>
         </ul>
         <img
